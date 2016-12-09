@@ -1,0 +1,622 @@
+/*
+	Cliente: DR PROJETOS
+	Agência: Magnifico Digital
+	Layout: Renan & Willy
+	Desenvolvedor: Caio Cesar
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700';
+
+html, body {
+	font-family: 'Open Sans', sans-serif !important;
+	margin: 0; 
+	padding: 0;
+	background: #1a1a1a !important;
+	color: #FFF !important;
+	overflow-x: hidden;
+
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+
+}
+
+.center {
+	float: none !important;
+	margin: 0 auto;
+}
+
+img {max-width: 100%;}
+a {color: #FFF;}
+
+::-webkit-input-placeholder {color: #000;}
+::-moz-placeholder {color: #000;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
+header#top-site {
+	text-indent: -9999px;
+	width: 468px;
+	height: 80px;
+	background: url(../img/sprites.png) no-repeat;
+	margin: 0 auto;
+	margin-top: 120px;
+	margin-bottom: 80px;
+}
+
+nav#menu-site {
+	margin-bottom: 60px 0;
+	text-align: center;
+	position: relative;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+
+nav#menu-site ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: auto;
+	display: block;
+	position: relative;
+}
+
+nav#menu-site ul li {
+	display: inline-block;
+	margin: 0 50px;
+}
+
+nav#menu-site ul li a {
+	display: block;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-decoration: none;
+	color: #FFF !important;
+	font-weight: 300;
+
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+
+nav#menu-site ul li a:hover {
+	font-weight: 700;
+}
+
+nav#menu-site a.logo {
+	width: 250px;
+	height: 42px;
+	display: none;
+	background: url("../img/sprites.png") no-repeat 0px -80px;
+	position: relative;
+	float: left;
+	text-indent: -9999px;
+}
+
+.menu-fixed {
+	position: fixed !important;
+	top: 0;
+	z-index: 500;
+	background: rgba(26,26,26,0.3);
+	padding: 30px;
+	width: 100%;
+}
+
+nav#menu-site.menu-fixed ul {
+	float: right;
+	margin-top: 10px;
+}
+
+nav#menu-site.menu-fixed ul li {
+	float: left;
+	margin: 0 30px;
+}
+
+section#projects {
+	background: url("../img/bg_projects.png") no-repeat center top;
+	background-size: cover;
+	height: auto;
+	margin: 50px 0;
+	padding: 50px 0; 
+}
+
+section#projects a {color: #FFF !important;}
+
+section#projects header {
+	margin-bottom: 70px;
+}
+
+section#projects header h2 {
+	font-size: 24px;
+	text-align: center;
+}
+
+section#projects figure {
+	display: block;
+}
+section#projects figure:hover .project-thumbnail {opacity: 0.75;}
+
+.project-thumbnail {position: relative;}
+.project-thumbnail span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}
+
+.category-project {
+	position: absolute !important;
+	top: 40px;
+	text-align: center;
+}
+
+section#projects figure h3:before {
+	content: "";
+	display: table;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	opacity: 1;
+}
+
+section#projects figure h3.architecture:before {background: url(../img/sprites.png) no-repeat 0px -125px}
+section#projects figure h3.engineering:before {background: url(../img/sprites.png) no-repeat -151px -125px}
+
+section#projects figure h3:after {
+	display: table;
+	content: "";
+}
+
+section#projects figure h3 {
+	font-size: 24px;
+	z-index: 500 !important;
+	font-weight: 700;
+	text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+
+section#who-we-are {
+	background: url(../img/bg_who-we-are.jpg) no-repeat center bottom -160px;
+	background-size: cover;
+	padding-top: 120px;
+	padding-bottom: 50px;
+}
+
+article.team h2 {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+article.team {
+	margin: 30px 0;
+}
+
+section.team {
+	margin: 30px 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+section.team .member img {
+	border: 1px solid #000;
+	margin-bottom: 20px;
+	height: auto;
+}
+
+.block-service {
+	background-size: cover;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.block-service article.about h2 {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.block-service article.about {
+	margin-top: 160px;
+	margin-bottom: 100px;
+}
+
+.block-service article.about p {font-weight: 300;}
+.block-service article.about p strong {font-weight: 700;}
+
+.services {
+	text-align: center;
+	list-style: none;
+}
+
+.services h2,
+.services h4 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 20px;
+}
+
+.services li {cursor: pointer;}
+
+section#architecture.block-service {background: url("../img/bg_arquitetura.jpg") no-repeat center bottom; background-size: cover;}
+section#engineering.block-service {background: url("../img/bg_engenharia.jpg") no-repeat center top; background-size: cover;}
+
+section#contact-form {
+	background: url(../img/bg_contato.jpg) no-repeat center top;
+	background-size: cover;
+	padding-top: 120px;
+	padding-bottom: 0;
+}
+
+section#contact-form .box-contato {
+	padding: 50px;
+	background: rgba(0,0,0,0.6);
+}
+
+section#contact-form .box-contato h4 {font-weight: 700;}
+section#contact-form .box-contato p {
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.mapWrapper {
+	width: 100%;
+	height: 565px;
+}
+
+form {}
+form input,
+form textarea {
+	padding: 5px 15px;
+	border: 0;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+form#formcontato input[type="text"],
+form#formcontato textarea {
+	width: 100%;
+}
+
+form#formcontato input[type="submit"] {
+	float: right !important;
+	padding: 10px 60px;
+}
+
+.call-to-action i,
+.call-to-action span,
+.call-to-action input {
+	float: left;
+	font-weight: 700;
+}
+
+.call-to-action span {margin-left: 80px;}
+
+.btn-site {
+	background: #197b30;
+	padding: 10px 15px;
+	border-bottom: 4px solid #084b13;
+	color: #FFF;
+	text-transform: uppercase;
+	/*transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;*/
+}
+
+.btn-site:hover {
+	background: #105c22; 
+	border-bottom: 4px solid #197b30;
+}
+
+footer#site {
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+	margin: 30px 0;
+}
+
+footer#site p.address {
+	font-size: 24px;	
+}
+
+footer#site p.address > i {
+	margin-right: 10px;
+}
+
+
+.sub-info {margin-top: 40px;}
+.sub-info h6 {
+	font-weight: 700;
+	text-transform: inherit;;
+}
+.sub-info p {
+	font-weight: 300;
+}
+
+.small-thumbnails {
+	width: 33.3333%;
+	float: left;
+}
+
+.small-thumbnails img {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#menu-mobile {
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+}
+
+#menu-mobile,
+#menu-mobile ul {
+	background: rgba(0,0,0,0.75); 
+}
+
+#menu-mobile .logo {
+	width: 250px;
+	height: 42px;
+	background: url("../img/sprites.png") no-repeat 0 -80px;
+	text-indent: -9999px;
+	display: inline-block;
+	position: relative;
+	margin: 20px 0;
+}
+
+#menu-mobile ul {
+	position: fixed;
+	width: 180px;
+	display: block;
+	height: 100%;
+	list-style: none;
+	padding: 20px 0;
+	top: 80px;
+	left: -220px;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+}
+
+#menu-mobile ul li a {
+	border-left: 2px solid #000;
+	padding: 10px;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #FFF;
+
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+}
+
+#menu-mobile ul li a:hover {
+	border-left: 2px solid #ed1c24;
+}
+
+#menu-mobile span {
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	top: 20px;
+	left: 20px;
+}
+
+.menu-active nav#menu-mobile ul {
+	left: 0;
+}
+
+.menu-active body {
+	/*-webkit-transform: translateX(220px);
+    -moz-transform: translateX(220px);
+    -ms-transform: translateX(220px);
+    transform: translateX(220px);*/
+    overflow-x: hidden;
+}
+
+.close-menu {
+	text-transform: uppercase;
+	background: rgba(0,0,0,0,90);
+}
+
+#menu-mobile {display: none;}
+.box-projeto {
+	width: 100%;
+	background: #1a1a1b;
+	display: block;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+.box-projeto img {
+	height: auto;
+}
+
+.box-projeto h1 {
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.sub-infos {
+	margin: 60px 0;
+}
+
+.aponter {
+	margin-left: 50px;
+	position: relative;
+	display: block;
+}
+
+.error404 {
+	margin: 100px 0;
+	text-align: center;
+}
+
+.error404 h2 {
+	font-size: 5rem;
+	font-weight: 700;
+}
+
+.error404 a {
+	color: #ec1c23;
+	text-decoration: none;
+}
+
+.error404 a:hover {
+	color: #ec1c23;
+}
+
+.content-description p {font-size: 14px;}
+
+.post-project {
+	margin-bottom: 30px;
+	height: 245px;
+}
+
+.post-project img {
+	height: auto;
+}
+
+.post-project a {
+	color: #FFF !important;
+	text-decoration: none;
+}
+
+.category-page {margin: 70px 0;}
+.category-page header {margin-bottom: 30px;}
+.category-page header h1 {
+	font-weight: 700;
+	font-size: 2rem;
+	float: left;
+}
+
+.breadcrumbs {
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.breadcrumbs p,
+.breadcrumbs ol,
+.breadcrumbs ol li {float: left;}
+
+.breadcrumbs ol {
+	margin-left: 10px;
+	padding-left: 0;
+}
+
+.breadcrumbs ol li {
+	list-style: none;
+	width: auto;
+	display: inline-block;
+	position: relative;
+	margin: 0 5px;
+}
+
+.breadcrumbs ol li:before{content: ""; display: table; float: left;}
+.breadcrumbs ol li:after{content: " > "; display: table; float: left; margin-right: 5px;}
+.breadcrumbs ol li:first-child:after {content: "";}
+
+.breadcrumbs ol li a {
+	color: #FFF !important;
+}
+.more-projects:before {}
+.more-projects:after {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	margin-left: 4px;
+	background: url('../img/sprites.png') no-repeat -300px -80px;
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+}
+
+.more-projects {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #FFF !important;
+	text-transform: uppercase;
+}
+
+.more-projects:hover {
+	text-decoration: none;
+}
+
+.more-projects:hover:after {
+	-ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);
+}
+
+@media only screen and (max-width: 769px) {
+	header#top-site,
+	nav#menu-site {display: none;}
+	section#contact-form .box-contato {
+		padding: 25px;
+	}
+
+	section#projects {padding-bottom: 0px;}
+	section#projects header {margin-bottom: 20px;}
+	section#projects figure {margin-bottom: 60px;}
+	section#who-we-are {
+		padding-top: 80px;
+	}
+
+	.block-service {padding: 10px;}
+	.block-service article.about {
+		margin-top: 90px;
+		margin-bottom: 50px;
+	}
+
+	ul.services li {margin-bottom: 30px;}
+
+	#menu-mobile {display: block;}
+	.mapWrapper {
+		max-width: 100%;
+		height: 250px;
+		margin-bottom: 20px;
+	}
+
+	section#contact-form {padding-top: 30px;}
+	.project-thumbnail {text-align: center;}
+
+	.project-thumbnail span {
+		left: 50%;
+		margin-left: -440px;
+	}
+
+	.slider-single {margin-bottom: 30px;}
+	.box-projeto {margin-top: 125px;}
+	.sub-infos {margin: 30px 0;}
+	.sub-infos > div.col-md-3 {	margin-bottom: 50px;}
+
+
+}
+
+@media only screen and (max-width: 356px) {
+	#menu-mobile .logo {margin-left: 40px;}
+
+}
