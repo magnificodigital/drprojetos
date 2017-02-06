@@ -231,7 +231,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.717258581018!2d-46.322719285446!3d-23.398443684763944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce877ef337a6d7%3A0xeef59a4db8c5a331!2sR.+Ol%C3%A1vo+Bilac%2C+24+-+Jardim+Rincao%2C+Aruj%C3%A1+-+SP%2C+07432-575!5e0!3m2!1spt-BR!2sbr!4v1476473781538" frameborder="0" style="border:0;" allowfullscreen class="mapWrapper"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.8209367484233!2d-46.32974106188951!3d-23.394694259795624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce87835c5159dd%3A0xb5fa9085f3064ae9!2sAv.+Jo%C3%A3o+Manoel%2C+600+-+Center+Ville%2C+Aruj%C3%A1+-+SP%2C+07432-575!5e0!3m2!1spt-BR!2sbr!4v1487013626897" frameborder="0" style="border:0" allowfullscreen class="mapWrapper"></iframe>
 			</div>
 			<div class="box-contato col-md-6 col-sm-12">
 				<h4>Solicite orçamento</h4>
