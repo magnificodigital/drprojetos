@@ -1,5 +1,1 @@
-<script type="text/javascript">
-	
-	window.location.href="<?php bloginfo('url') ?>"
-
-</script>
+<?php wp_redirect(get_bloginfo('url')); exit ?>

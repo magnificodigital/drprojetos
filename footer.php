@@ -1,4 +1,3 @@
-
 <footer id="site" class="col-xs-12">
 	<p class="address">
 			<i class="fa fa-map-marker" aria-hidden="true"></i>
