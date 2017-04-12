@@ -46,7 +46,7 @@ header#top-site {
 	text-indent: -9999px;
 	width: 468px;
 	height: 80px;
-	background: url(../img/sprites.png) no-repeat;
+	background: url(../img/sprites.svg) no-repeat;
 	margin: 0 auto;
 	margin-top: 120px;
 	margin-bottom: 80px;
@@ -80,8 +80,8 @@ nav#menu-site ul li a {
 	text-transform: uppercase;
 	font-size: 16px;
 	text-decoration: none;
-	color: #FFF !important;
-	font-weight: 300;
+	color: #AAA !important;
+	font-weight: 400;
 
 	transition: 0.2s;
 	-webkit-transition: 0.2s;
@@ -89,14 +89,30 @@ nav#menu-site ul li a {
 }
 
 nav#menu-site ul li a:hover {
-	font-weight: 700;
+	color: #FFF !important;
+}
+
+nav#menu-site ul li a:after {
+	background: #EC2227;
+	height: 2px;
+	width: 0;
+	content: "";
+	display: block;
+	margin-top: 10px;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+}
+
+nav#menu-site ul li a:hover:after {
+	width: 100%;
 }
 
 nav#menu-site a.logo {
 	width: 250px;
 	height: 42px;
 	display: none;
-	background: url("../img/sprites.png") no-repeat 0px -80px;
+	background: url("../img/sprites.svg") no-repeat 0px -80px;
 	position: relative;
 	float: left;
 	text-indent: -9999px;
@@ -170,8 +186,8 @@ section#projects figure h3:before {
 	opacity: 1;
 }
 
-section#projects figure h3.architecture:before {background: url(../img/sprites.png) no-repeat 0px -125px}
-section#projects figure h3.engineering:before {background: url(../img/sprites.png) no-repeat -151px -125px}
+section#projects figure h3.architecture:before {background: url(../img/sprites.svg) no-repeat 0px -122px}
+section#projects figure h3.engineering:before {background: url(../img/sprites.svg) no-repeat -151px -122px}
 
 section#projects figure h3:after {
 	display: table;
@@ -288,9 +304,19 @@ form#formcontato textarea {
 	width: 100%;
 }
 
-form#formcontato input[type="submit"] {
+form#formcontato input[type="submit"],
+form#formcontato button {
 	float: right !important;
 	padding: 10px 60px;
+	font-weight: 700;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+form#formcontato .resposta {
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .call-to-action i,
@@ -300,7 +326,7 @@ form#formcontato input[type="submit"] {
 	font-weight: 700;
 }
 
-.call-to-action span {margin-left: 80px;}
+.call-to-action span {margin-left: 20px;}
 
 .btn-site {
 	background: #197b30;
@@ -371,7 +397,7 @@ footer#site p.address > i {
 #menu-mobile .logo {
 	width: 250px;
 	height: 42px;
-	background: url("../img/sprites.png") no-repeat 0 -80px;
+	background: url("../img/sprites.svg") no-repeat 0 -80px;
 	text-indent: -9999px;
 	display: inline-block;
 	position: relative;
@@ -471,7 +497,7 @@ footer#site p.address > i {
 }
 
 .error404 h2 {
-	font-size: 5rem;
+	font-size: 3rem;
 	font-weight: 700;
 }
 
@@ -533,18 +559,20 @@ footer#site p.address > i {
 .breadcrumbs ol li:before{content: ""; display: table; float: left;}
 .breadcrumbs ol li:after{content: " > "; display: table; float: left; margin-right: 5px;}
 .breadcrumbs ol li:first-child:after {content: "";}
-
 .breadcrumbs ol li a {
 	color: #FFF !important;
 }
+
 .more-projects:before {}
 .more-projects:after {
 	content: "";
 	display: inline-block;
 	width: 25px;
-	height: 20px;
-	margin-left: 4px;
-	background: url('../img/sprites.png') no-repeat -300px -80px;
+	position: absolute;
+	bottom: 0px;
+	height: 25px;
+	margin-left: 10px;
+	background: url('../img/sprites.svg') no-repeat -301px -80px;
 	-ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
@@ -570,6 +598,8 @@ footer#site p.address > i {
     -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
     transform: rotate(270deg);
 }
+
+.customize-support nav#menu-site {top: 32px}
 
 @media only screen and (max-width: 769px) {
 	header#top-site,

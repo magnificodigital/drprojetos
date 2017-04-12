@@ -5,46 +5,73 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="<?php if ( is_single() ) {single_post_title('', true);} else {bloginfo('description');}?>">
+
 		<title><?php bloginfo('name') ?></title>
+
+		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/swiper.min.css">		
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/main.css">
+
+		<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.png">
 
 		<?php wp_head(); ?>
 
-		<!-- Bootstrap -->
-		<link href="<?php bloginfo('template_url') ?>/css/main.css" rel="stylesheet">
-		<link href="<?php bloginfo('template_url') ?>/css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/swiper.min.css">
-		
-		<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.png">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.scrollTo.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/main.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.jquery.min.js"></script>
-
-		<!--Google Analytics-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-86848573-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
 
 	</head>
 <body>
 
 <header id="top-site">
-	<a href="<?php bloginfo('url') ?>"><h1 title="<?php bloginfo('name') ?>">DR PROJETOS</h1></a>	
+	<a href="<?php bloginfo('url') ?>"><h1 title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></h1></a>	
 </header>
+
+<?php
+	//Aqui vamos verificar em qual página está, se for a home ele insere apenas os IDs, se for diferente vamos inserir o link do site antes
+	if (is_home()) {
+		$menu = array(
+			'home' => '#',
+			'quemsomos' => '#who-we-are',
+			'arquitetura' => '#architecture',
+			'engenharia' => '#engineering',
+			'contato' => '#contact-form'
+		);
+	} else {
+		$menu = array(
+			'home' => get_bloginfo('url').'',
+			'quemsomos' => get_bloginfo('url').'/#who-we-are',
+			'arquitetura' => get_bloginfo('url').'/#architecture',
+			'engenharia' => get_bloginfo('url').'/#engineering',
+			'contato' => get_bloginfo('url').'/#contact-form'
+		);
+	}
+?>
+
+<!--menu desktop-->
+<nav id="menu-site">
+	<div class="container">
+		<a href="#" class="logo" title="<?php echo get_bloginfo('name') ?>">DR PROJETOS</a>
+		<ul>
+			<li><a href="<?php echo $menu['home'] ?>">home</a></li>
+			<li><a href="<?php echo $menu['quemsomos'] ?>">quem somos</a></li>
+			<li><a href="<?php echo $menu['arquitetura'] ?>">arquitetura</a></li>
+			<li><a href="<?php echo $menu['engenharia'] ?>">engenharia</a></li>
+			<li><a href="<?php echo $menu['contato'] ?>">contato</a></li>
+		</ul>
+	</div>
+</nav>
+
+<!--menu mobile-->
+<nav id="menu-mobile">
+		<span class="menu-anchor"><i class="fa fa-2x fa-bars"></i></span>
+		<a href="<?php echo $menu['home'] ?>" class="logo" title="<?php echo get_bloginfo('name') ?>">DR PROJETOS</a>
+		<ul>
+			<li><a href="<?php echo $menu['home'] ?>">home</a></li>
+			<li><a href="<?php echo $menu['quemsomos'] ?>">quem somos</a></li>
+			<li><a href="<?php echo $menu['arquitetura'] ?>">arquitetura</a></li>
+			<li><a href="<?php echo $menu['engenharia'] ?>">engenharia</a></li>
+			<li><a href="<?php echo $menu['contato'] ?>">contato</a></li>
+		</ul>
+	</div>
+</nav>
+

@@ -1,33 +1,7 @@
 <?php get_header(); ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/slider-single.css">
 
-<!--menu desktop-->
-<nav id="menu-site">
-	<div class="container">
-		<a href="#" class="logo" title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></a>
-		<ul>
-			<li><a href="<?php bloginfo('url') ?>">home</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#who-we-are">quem somos</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#architecture">arquitetura</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#engineering">engenharia</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#contact-form">contato</a></li>
-		</ul>
-	</div>
-</nav>
 
-<!--menu mobile-->
-<nav id="menu-mobile">
-		<span class="menu-anchor"><i class="fa fa-2x fa-bars"></i></span>
-		<a href="#" class="logo" title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></a>
-		<ul>
-			<li><a href="<?php bloginfo('url') ?>/">home</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#who-we-are">quem somos</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#architecture">arquitetura</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#engineering">engenharia</a></li>
-			<li><a href="<?php bloginfo('url') ?>/#contact-form">contato</a></li>
-		</ul>
-	</div>
-</nav>
 
 
 <section class="box-projeto">
