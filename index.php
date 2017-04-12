@@ -1,33 +1,4 @@
 <?php get_header(); ?>
-<!--menu desktop-->
-<nav id="menu-site">
-	<div class="container">
-		<a href="#" class="logo" title="DR Projetos - Arquitetura e Engenharia">DR PROJETOS</a>
-		<ul>
-			<li><a href="#">home</a></li>
-			<li><a href="#who-we-are">quem somos</a></li>
-			<li><a href="#architecture">arquitetura</a></li>
-			<li><a href="#engineering">engenharia</a></li>
-			<li><a href="#contact-form">contato</a></li>
-		</ul>
-	</div>
-</nav>
-
-<!--menu mobile-->
-<nav id="menu-mobile">
-		<span class="menu-anchor"><i class="fa fa-2x fa-bars"></i></span>
-		<a href="#" class="logo" title="DR Projetos - Arquitetura e Engenharia">DR PROJETOS</a>
-		<ul>
-			<li><a href="#">home</a></li>
-			<li><a href="#who-we-are">quem somos</a></li>
-			<li><a href="#architecture">arquitetura</a></li>
-			<li><a href="#engineering">engenharia</a></li>
-			<li><a href="#contact-form">contato</a></li>
-		</ul>
-	</div>
-</nav>
-
-
 <section id="projects">
 	<div class="container">
 		<div class="row">
@@ -237,16 +208,18 @@
 				<h4>Solicite orçamento</h4>
 				<p>Preencha o formulário abaixo para que nossa equipe entre em contato e ajude-o a encontrar a melhor solução em arquitetura ou engenharia</p>
 
-				<form id="formcontato" method="post" action="<?php bloginfo('template_url') ?>/mail/send.php">
-					<p><input type="text" name="nome" placeholder="Nome" required></p>
-					<p><input type="text" name="email" placeholder="Email" required></p>
-					<p><input type="text" name="telefone" placeholder="Telefone"></p>
-					<p><textarea rows="4" name="msg" placeholder="Mensagem" required></textarea></p>
+				<form id="formcontato" method="post">
+					<p><input type="text" name="nome" placeholder="Nome"></p>
+					<p><input type="text" name="email" placeholder="Email"></p>
+					<p><input type="text" name="telefone" class="telefone" placeholder="Telefone"></p>
+					<p><textarea rows="4" name="msg" placeholder="Mensagem"></textarea></p>
+
+					<div class="resposta"></div>
 
 					<p class="call-to-action">
 						<i class="fa fa-phone fa-3x"></i>
 						<span class="call">ligamos<br />para você</span>
-						<input type="submit" name="solicite" value="solicite" class="btn-site" />
+						<button id="enviaform" type="button" name="solicite" class="btn-site">solicite</button>
 						<div class="clearfix"></div>
 					</p>
 				</form>
@@ -263,14 +236,56 @@
 	//Scroll para ID's
 	$(function(){
 		$('nav#menu-site a, nav#menu-mobile a, #projects a').click(function(e){
-		$.scrollTo( this.hash || 0, 500);
-		e.preventDefault();
-		$('html').removeClass('menu-active');
+			$.scrollTo(this.hash || 0, 500);
+			e.preventDefault();
+			$('html').removeClass('menu-active');
 		});
 	});
 </script>
 
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('.telefone').mask("(99) 9999-9999");
+	});
 
+</script>
+
+<script type="text/javascript">
+	window.sr = ScrollReveal({
+		origin: 'center',
+		//distance: '20px',
+		duration: 1000,
+		delay: 0,
+		rotate: { x: 0, y: 0, z: 0 },
+		opacity: 0,
+		scale: 1,
+		//easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+		//container: window.document.documentElement,
+		mobile: true,
+		reset: false,
+
+		// 'always' — delay for all reveal animations
+		// 'once'   — delay only the first time reveals occur
+		// 'onload' - delay only for animations triggered by first load
+		useDelay: 'always',
+
+		// Change when an element is considered in the viewport. The default value
+		// of 0.20 means 20% of an element must be visible for its reveal to occur.
+		viewFactor: 0.2,
+
+		// Pixel values that alter the container boundaries.
+		// e.g. Set `{ top: 48 }`, if you have a 48px tall fixed toolbar.
+		// --
+		// Visual Aid: https://scrollrevealjs.org/assets/viewoffset.png
+		viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
+	});
+
+	sr.reveal('#engineering .services');
+	sr.reveal('#architecture .services');
+	sr.reveal('section.team');
+
+</script>
 
 </body>
 </html>
