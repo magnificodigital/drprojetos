@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3128dc1999a90e3dae880f5992cba352d7f99b8
 <section id="projects">
 	<div class="container">
 		<div class="row">
@@ -231,7 +235,6 @@
 		</div>
 	</div>
 </section>
-
 <script type="text/javascript">
 	//Scroll para ID's
 	$(function(){
@@ -242,15 +245,11 @@
 		});
 	});
 </script>
-
 <script type="text/javascript">
-	
 	$(document).ready(function(){
 		$('.telefone').mask("(99) 9999-9999");
 	});
-
 </script>
-
 <script type="text/javascript">
 	window.sr = ScrollReveal({
 		origin: 'center',
@@ -284,8 +283,6 @@
 	sr.reveal('#engineering .services');
 	sr.reveal('#architecture .services');
 	sr.reveal('section.team');
-
 </script>
-
 </body>
 </html>
